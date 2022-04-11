@@ -15,7 +15,7 @@
 
 <body>
   <header>
-    <div>
+    <div class="container">
       <nav class="nav_bar">
         <img src="./images/logo.svg" alt="logo">
         <ul>
@@ -32,15 +32,19 @@
 
           <p> Fylo stores your most important files in one secure location.
             Access them wherever you need, share and collaborate with friends,
-            family, and co-workers.</p>
+            family, and co-workers.
+          </p>
 
-          <input type="email" placeholder="Enter your email">
-          <button>Get Started</button>
+          <form action="">
+            <input type="email" placeholder="Enter your email">
+            <button>Get Started</button>
+          </form>
+          
 
         </div>
 
         <div class="hero_img">
-          <img src="./images/illustration-1.svg" alt="">
+          <img class="illustration" src="./images/illustration-1.svg" alt="">
         </div>
 
 
@@ -51,57 +55,70 @@
 
   </header>
 
-  <section>
-    <div class="flex">
-      <div class="container">
-        <img src="./images/bg-curve-desktop.svg" alt="">
-        <h2>
-          Stay productive, wherever you are
-        </h2>
-        <p>
-          Never let location be an issue when accessing your files. Fylo has you
-          covered for all of your file storage needs.
-        </p>
-        <p>
-          Securely share files and folders with friends, family and colleagues for
-          live collaboration. No email attachments required!
 
-        </p>
-        <a href="#">See how Fylo works</a>
+  
+  <section class="desaturated">
+    <!-- <img src="./images/bg-curve-desktop.svg" alt=""> -->
+    <div class="container">
 
-        <div class="testimonial_card">
-          <p>Fylo has improved our team productivity by an order of magnitude. Since
-            making the switch our team has become a well-oiled collaboration machine.
+      <div class="flex">
+
+        <div>
+
+          <h2>
+            Stay productive, wherever you are
+          </h2>
+          <p>
+            Never let location be an issue when accessing your files. Fylo has you
+            covered for all of your file storage needs.
           </p>
+          <p>
+            Securely share files and folders with friends, family and colleagues for
+            live collaboration. No email attachments required!
 
-          <div class="user_info">
-            <div class="user_img">
-              <img src="./images/avatar-testimonial.jpg" alt="user">
-            </div>
-            <div>
-              <h4>
-                Kyle Burton
-              </h4>
-              <small>
-                Founder & CEO, Huddle
-              </small>
+          </p>
+          <a class="green" href="#">See how Fylo works <img src="./images/icon-arrow.svg" alt="green arrow"></a>
+          
+
+          <div class="testimonial_card">
+            <img class="illustration" src="./images/icon-quotes.svg" alt="">
+            <p>Fylo has improved our team productivity by an order of magnitude. Since
+              making the switch our team has become a well-oiled collaboration machine.
+            </p>
+
+            <div class="user_info">
+              <div class="user_img">
+                <img src="./images/avatar-testimonial.jpg" alt="user">
+              </div>
+              <div>
+                <h4>
+                  Kyle Burton
+                </h4>
+                <small>
+                  Founder & CEO, Huddle
+                </small>
+              </div>
+
             </div>
 
           </div>
-
         </div>
 
+
+
+        <div class="second_img">
+          <img src="./images/illustration-2.svg" alt="productive image">
+        </div>
+        
       </div>
 
-      <div class="second_img">
-        <img src="./images/illustration-2.svg" alt="productive image">
-      </div>
+
     </div>
 
 
   </section>
 
-  <section>
+  <section class="blueish">
     <div class="container">
       <div class="flex">
         <div>
@@ -114,38 +131,48 @@
           </p>
         </div>
 
-
-        <form action="">
-          <input type="email" placeholder="email@example.com">
-          <button>Get Started For Free</button>
-        </form>
+        <div class="flex">
+          <form class="column" action="">
+            <input type="email" placeholder="email@example.com">
+            <button>Get Started For Free</button>
+          </form>
+        </div>
+        
 
       </div>
     </div>
   </section>
 
-  <footer>
+<section class="last">
+  <div class="container">
+    <img src="./images/logo white.svg" alt="">
+  <div class="flex footer">
+    <ul>
+      <li>Phone: +1-543-123-4567</li>
+      <li>example@fylo.com</li>
+    </ul>
+  
+    <ul>
+      <li>About Us</li>
+      <li>Jobs</li>
+      <li>Press</li>
+      <li>Blog</li>
+    </ul>
+  
+    <ul>
+      <li>Contact Us</li>
+      <li>Terms</li>
+      <li>Privacy</li>
+    </ul>
+  </div>
 
-  </footer>
-  <img src="./images/logo.svg" alt="">
-  <ul>
-    <li>Phone: +1-543-123-4567</li>
-    <li>example@fylo.com</li>
-  </ul>
+  </div>
+  
+  
 
-  <ul>
-    <li>About Us</li>
-    <li>Jobs</li>
-    <li>Press</li>
-    <li>Blog</li>
-  </ul>
 
-  <ul>
-    <li>Contact Us</li>
-    <li>Terms</li>
-    <li>Privacy</li>
-  </ul>
-
+</section>
+  
 
   <footer>
     <p class="attribution">

@@ -1,10 +1,312 @@
+/* Raleway Font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+/* Open Sans Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 
+
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif; */
+
+:root {
+  --VeryDarkBlue: hsl(243, 87%, 12%);
+  --DesaturatedBlue: hsl(238, 22%, 44%);
+  --BrightBlue: hsl(224, 93%, 58%);
+  --ModerateCyan: hsl(170, 45%, 43%);
+  --LightGrayishBlue: hsl(240, 75%, 98%);
+  --LightGray: hsl(0, 0%, 75%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--VeryDarkBlue);
+  font-size: 1.1rem;
+
+}
+
+h1, h2, h4 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+
+.green {
+  color: var(--ModerateCyan);
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1200px;
+
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex > div {
+  flex: 1;
+}
+
+.flex > div:first-child {
+  margin-right: 10px;
+}
+
+.flex > div:last-child {
+  margin-left: 10px;
+}
+
+/* Navigation Styling */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+nav ul {
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+  
+}
+
+nav ul li {
+  margin-left: 50px;
+}
+
+nav ul a {
+  font-family: 'Raleway', sans-serif;
+  color: var(--VeryDarkBlue);
+  text-decoration: none;
+}
+
+/* Hero section */
+
+h2 {
+  margin-bottom: 30px;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* All sections */
+
+section {
+  padding: 40px 0;
+}
+
+section.desaturated {
+  background-color: var(--LightGrayishBlue);
+  margin-top: 50px;
+  position: relative;
+  padding: 50px 0;
+}
+
+section.desaturated::before {
+  content: '';
+  background-image: url(./images/bg-curve-desktop.svg);
+  background-size: cover;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  height: 60px;
+  width: 100%;
+}
+
+
+
+
+/* Form Styling */
+
+form {
+  display: flex;
+
+}
+
+button {
+  flex: 0.3;
+  border: 1px solid var(--BrightBlue);
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  background-color: var(--BrightBlue);
+  color: var(--LightGrayishBlue);
+}
+
+input {
+  flex: 0.7;
+  border: 1px solid var(--VeryDarkBlue);
+  border-radius: 2px;
+  padding: 15px;
+  margin-right: 10px;
+
+}
+
+input::placeholder {
+  color: var(--LightGray);
+}
+
+form.column {
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Testimonial Card */
+
+.testimonial_card {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 80%;
+  padding: 25px;
+  margin-top: 40px;
+}
+
+.testimonial_card p {
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+.user_info {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.user_info img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.user_info h4 {
+  margin: 0;
+}
+
+/* Blueish section */
+
+.blueish {
+  background-color: var(--DesaturatedBlue);
+  color: var(--LightGrayishBlue);
+}
+
+.blueish form button {
+  width: 50%;
+  margin-top: 10px;
+}
+
+.blueish p {
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+
+/* Last section/footer */
+
+section.last {
+  background-color: var(--VeryDarkBlue);
+  color: var(--LightGray);
+}
+
+.footer {
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px 0;
+}
+
+.footer ul {
+  list-style-type: none;
+}
+
+
+/* attribution */
 .attribution {
     font-size: 11px;
     text-align: center;
+    margin: 0;
   }
 
   .attribution a {
     color: hsl(228, 45%, 44%);
+  }
+
+
+  @media screen and (max-width: 768px) {
+    body {
+      text-align: center;
+    }
+
+    nav ul li {
+      margin-left: 10px;
+    }
+
+    section.desaturated::before {
+      background-image: url(./images/bg-curve-mobile.svg);
+    }
+
+    .flex {
+      flex-direction: column;
+    }
+
+    .flex div {
+      width: 100%;
+    }
+
+    .illustration {
+      margin-top: 30px;
+    }
+
+    .testimonial_card {
+      width: 100%;
+    }
+
+    .flex > div:first-child {
+      margin-right: 0px;
+    }
+    
+    .flex > div:last-child {
+      margin-left: 0px;
+    }
+
+    .blueish form button {
+      margin: 20px 0;
+      
+    }
+
+    div form {
+      align-items: center;
+      justify-content: center;
+    }
+
+    form input {
+      width: 100%;
+    }
+
+    .user_info {
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer {
+      justify-content: left;
+    }
   }
